@@ -2,7 +2,7 @@
 
 ## Puzzle generation
 
-Generate random full sudoku puzzle 9x9 and the remove some values to create a problem to solve
+Generate random full sudoku puzzle NxN and the remove some values to create a problem to solve
 
 ```
 full_puzzle = generate_puzzle()
