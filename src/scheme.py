@@ -1,6 +1,3 @@
-import itertools
-
-
 class Group:
     def __init__(self, group_name, number_of_students):
         self.group_name = group_name
@@ -40,24 +37,8 @@ class Subject:
         self.practice_number = practice_number
 
     def __repr__(self):
-        return (f"{self.subject_name}")
+        return f"{self.subject_name}"
 
-
-class Lesson:
-    id_iter = itertools.count()
-
-    def __init__(self, subject, subject_type, group, teacher):
-        self.id = next(self.id_iter)
-        self.subject = subject
-        self.subject_type = subject_type
-        self.group = group
-        self.teacher = teacher
-
-        self.hours_occupied = 0
-
-    def __repr__(self):
-        return (f"Lesson {self.subject}, {self.subject_type}, {self.group}, "
-                f"{self.teacher}")
 
 
 

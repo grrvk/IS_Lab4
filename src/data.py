@@ -1,6 +1,5 @@
 import random
-
-from scheme import *
+from src.scheme import *
 
 
 GROUPS = [Group('МІ-41', 20),
@@ -67,11 +66,9 @@ for group in GROUPS:
     subjects_and_types = random.sample(subject_and_type_list, int(len(subject_and_type_list)*0.6))
     for sat in subjects_and_types:
         if len(sat[1]) == 1:
-            SUBJECTS.append(Subject(sat[0], group, 1, 0))
+            SUBJECTS.append(Subject(sat[0], group, 2, 0))
         else:
-            SUBJECTS.append(Subject(sat[0], group, 1, 1))
+            SUBJECTS.append(Subject(sat[0], group, 2, 2))
 
 TIMESLOTS = ['08:40', '10:35', '12:20']
 DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
-
-print(SUBJECTS)
